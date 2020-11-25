@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29609.76
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Makers of Denmark", "Makers of Denmark.csproj", "{E1104CCE-B3B8-43D6-8808-2E073AD0897A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E1104CCE-B3B8-43D6-8808-2E073AD0897A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1104CCE-B3B8-43D6-8808-2E073AD0897A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1104CCE-B3B8-43D6-8808-2E073AD0897A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1104CCE-B3B8-43D6-8808-2E073AD0897A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5FEE36BE-AFDE-4E06-BF7C-94DD0D4FC95C}
+	EndGlobalSection
+EndGlobal
