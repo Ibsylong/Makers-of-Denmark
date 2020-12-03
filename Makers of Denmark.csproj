@@ -31,7 +31,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Login\" />
     <Folder Include="wwwroot\css\img\" />
     <Folder Include="wwwroot\css\pages\login\" />
     <Folder Include="wwwroot\css\pages\explore\" />
