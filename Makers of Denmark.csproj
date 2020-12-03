@@ -9,6 +9,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\css\pages\event\**" />
+    <Compile Remove="wwwroot\css\pages\explore\**" />
+    <Compile Remove="wwwroot\css\pages\login\**" />
+    <Content Remove="wwwroot\css\pages\event\**" />
+    <Content Remove="wwwroot\css\pages\explore\**" />
+    <Content Remove="wwwroot\css\pages\login\**" />
+    <EmbeddedResource Remove="wwwroot\css\pages\event\**" />
+    <EmbeddedResource Remove="wwwroot\css\pages\explore\**" />
+    <EmbeddedResource Remove="wwwroot\css\pages\login\**" />
+    <None Remove="wwwroot\css\pages\event\**" />
+    <None Remove="wwwroot\css\pages\explore\**" />
+    <None Remove="wwwroot\css\pages\login\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Remove="compilerconfig.json" />
   </ItemGroup>
 
@@ -26,14 +41,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\css\pages\event\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Views\Login\" />
     <Folder Include="wwwroot\css\img\" />
-    <Folder Include="wwwroot\css\pages\login\" />
-    <Folder Include="wwwroot\css\pages\explore\" />
   </ItemGroup>
 
 
