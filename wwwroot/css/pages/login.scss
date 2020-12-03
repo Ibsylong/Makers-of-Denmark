@@ -1,8 +1,10 @@
-﻿.login {
-    height: 100vh;
-    background-color: black;
+﻿@import "../variables.scss";
 
-    h1 {
+.login {
+    height: 100vh;
+    background-color: black; 
+
+    h1{
         color: $color-primary;
     }
 
