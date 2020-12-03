@@ -28,6 +28,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\css\pages\event.css" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="compilerconfig.json" />
   </ItemGroup>
 
