@@ -26,5 +26,9 @@
   {
     "outputFile": "wwwroot/css/pages/home.css",
     "inputFile": "wwwroot/css/pages/home.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/variables.css",
+    "inputFile": "wwwroot/css/variables.scss"
   }
 ]
