@@ -6,5 +6,25 @@
   {
     "outputFile": "wwwroot/css/pages/login.css",
     "inputFile": "wwwroot/css/pages/login.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/pages/calendar.css",
+    "inputFile": "wwwroot/css/pages/calendar.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/pages/event.css",
+    "inputFile": "wwwroot/css/pages/event.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/pages/explore.css",
+    "inputFile": "wwwroot/css/pages/explore.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/pages/feed.css",
+    "inputFile": "wwwroot/css/pages/feed.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/pages/home.css",
+    "inputFile": "wwwroot/css/pages/home.scss"
   }
 ]
