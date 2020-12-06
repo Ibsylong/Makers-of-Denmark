@@ -4,8 +4,16 @@
     display: grid;
     grid-template-columns: repeat(2,auto);
 
+    .login-illustration{
+        background-color: cornflowerblue;
+
+        img{
+            opacity: 0.8;
+        }
+    }
+
     .login-form {
         width: 500px;
-        background: pink;
+        padding: 50px 100px;
     }
 }
