@@ -52,6 +52,8 @@
             justify-items: center;
             color: $color-text-2;
             margin-bottom: 1rem;
+            white-space: nowrap;
+            gap: 0.7rem;
 
             p {
                 width: 100%;
@@ -81,6 +83,7 @@
     .register-makerspace {
         text-align: center;
         margin-bottom: 4rem;
+        margin-top: 3rem;
 
         p + p {
             color: $color-primary;
