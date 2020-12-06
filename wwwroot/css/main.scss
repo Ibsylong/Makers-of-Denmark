@@ -1,4 +1,5 @@
-﻿@import "pages/home.scss";
+﻿@import "shared.scss";
+@import "pages/home.scss";
 @import "pages/login.scss";
 @import "pages/calendar.scss";
 @import "pages/event.scss";
@@ -6,6 +7,37 @@
 @import "pages/feed.scss";
 
 
+
+.top-nav-bar {
+    display: flex;
+    height: 50px;
+    padding: 0 2rem;
+    background-color: lightgrey;
+
+    .logo-brand {
+        white-space: nowrap;
+        margin: auto;
+    }
+
+    .top-nav {
+        display: flex;
+        gap: 4rem;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+
+        li {
+            margin: auto 0;
+        }
+    }
+}
+
+
+/* OTHER */
+a {
+    color: inherit;
+    text-decoration: none;
+}
 
 /* Box sizing rules */
 *,

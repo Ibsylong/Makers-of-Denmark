@@ -1,14 +1,11 @@
 ﻿@import "../variables.scss";
 
 .login {
-    height: 100vh;
-    background-color: black; 
+    display: grid;
+    grid-template-columns: repeat(2,auto);
 
-    h1{
-        color: $color-primary;
-    }
-
-    .bubber {
-        color: red;
+    .login-form {
+        width: 500px;
+        background: pink;
     }
 }
