@@ -1,5 +1,59 @@
 ﻿@import "../variables.scss";
 
+// GLOBAL
 .explore {
-    background-color: green;
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+
+
+//Intro sektion
+.intro-section {
+    // Fjern margins efter styling
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+
+    display: flex;
+    grid-template-columns: repeat(2,auto);
+}
+
+.box1 {
+    width: 45vw;
+    padding-right: 5rem;
+}
+
+.box2 {
+    width: 55vw;
+}
+
+.title {
+    padding-bottom: $padding-md;
+}
+
+.paragraph {
+    padding-bottom: $padding-lg;
+}
+
+.title-button {
+    width: 10rem;
+}
+
+
+
+
+//Grid sektion
+.flex {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.link-text {
+    margin-top: 1rem;
+}
+
+.gridview {
+    height: 50vh;
 }
