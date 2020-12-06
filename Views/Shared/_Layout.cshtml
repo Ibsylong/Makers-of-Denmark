@@ -7,30 +7,8 @@
     <link rel="stylesheet" href="~/css/main.css" asp-append-version="true" />
 </head>
 <body>
-    <header>
-        <nav class="top-nav-bar">
-            <a class="logo-brand" asp-area="" asp-controller="Home" asp-action="Index">Makers of Denmark</a>
-            <ul class="top-nav">
-                <li class="">
-                    <a class="" asp-area="" asp-controller="Home" asp-action="">Home</a>
-                </li>
-                <li class="">
-                    <a class="" asp-area="" asp-controller="Feed" asp-action="">Feed</a>
-                </li>
-                <li class="">
-                    <a class="" asp-area="" asp-controller="Explore">Udforsk</a>
-                </li>
-                <li class="">
-                    <a class="" asp-area="" asp-controller="Calendar">Kalender</a>
-                </li>
-                <li class="">
-                    <a class="" asp-area="" asp-controller="Login">Login</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
     <div class="container">
-        <main role="main" class="pb-3">
+        <main role="main" class="main">
             @RenderBody()
         </main>
     </div>
