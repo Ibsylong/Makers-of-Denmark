@@ -1,9 +1,25 @@
 ﻿@import "../variables.scss";
 
-
+//GLOBAL
 .event {
-
     background-color: aliceblue;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    grid-template-columns: repeat(2,auto);
+}
 
+.infobox-container {
+    width: 15vw;
+    background-color: grey;
+}
 
+.event-section {
+    width: 60vw;
+    margin-right: 5rem;
+}
+
+//Event sektion
+.event-container {
+    background-color: white;
 }
