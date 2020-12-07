@@ -1,1 +1,61 @@
-﻿
+﻿@import "../variables.scss";
+
+#home {
+    background-color: white;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: repeat(1, 2fr);
+    grid-gap: 3rem;
+    padding: 2rem;
+    align-items: center;
+    margin: 0 auto;
+    width: 80%;
+
+
+    .btn-sign-up {
+        margin-top: 1rem;
+        width: 10vw;
+    }
+
+    .login-illustration {
+
+    }
+
+    h2 {
+        color: blue;
+    }
+
+    
+}
+
+/* Kort funktion */
+
+.grid-1 {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: repeat(1, 2fr);
+    grid-gap: 3rem;
+    padding: 2rem;
+    align-items: center;
+    margin: 0 auto;
+    width: 80%;
+
+
+    .box {
+        background-color: lightblue;
+    }
+
+    .btn-sign-up {
+        margin-top: 1rem;
+        width: 10vw;
+    }
+
+    .side-img {
+        background-image: url(../img/happy-people.jpg);
+        background-color: red;
+        color: red;
+    }
+}
