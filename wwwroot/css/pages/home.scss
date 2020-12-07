@@ -42,10 +42,10 @@
     align-items: center;
     margin: 0 auto;
     width: 80%;
+    background-color: lightblue;
 
 
     .box {
-        background-color: lightblue;
     }
 
     .btn-sign-up {
@@ -55,7 +55,5 @@
 
     .side-img {
         background-image: url(../img/happy-people.jpg);
-        background-color: red;
-        color: red;
     }
 }

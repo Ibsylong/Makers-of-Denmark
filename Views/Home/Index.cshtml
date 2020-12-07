@@ -1,8 +1,10 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    @Html.Partial("_TopNavBar")
 }
 
 <main id="home">
+
     <section class="grid">
         <div class="box">
             <h2 class="header-title">Makers of Denmark</h2>
@@ -16,6 +18,7 @@
     @* Kort filter funktion*@
     <section class="grid-1">
         <div class="side-img">
+            <img src="~/css/img/happy-people.jpg" alt="Alternate Text" />
         </div>
         <div class="box">
             <h2 class="header-title">Hvem er vi?</h2>
