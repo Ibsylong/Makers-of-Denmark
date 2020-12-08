@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Reflection;
 using System.Threading.Tasks;
 using Makers_of_Denmark.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -30,8 +31,9 @@ namespace Makers_of_Denmark.Controllers
             var data = await response.Content.ReadAsStringAsync();
             // Treat the response body string as JSON, and deserialize it into a list of flights
 
-            //return View(JsonConvert.DeserializeObject<List<Makerspace>>(data));
-            return View();
+            MakerspacesModel makerspacesModel = JsonConvert.DeserializeObject<MakerspacesModel>(data);
+
+            return View(makerspacesModel.makerSpaces);
         }
     }
 }
