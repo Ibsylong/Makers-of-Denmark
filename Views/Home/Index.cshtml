@@ -1,9 +1,57 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    @Html.Partial("_TopNavBar");
 }
 
-<div class="text-center">
-    @Html.Partial("_TopNavBar")
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<main id="home">
+
+    <section class="grid-content">
+        <div class="box">
+            <h2 class="header-title">Makers of Denmark</h2>
+            <p>Makers of Denmark skaber et nemt og overskueligt overblik over de forskellige Makerspaces i Danmark. Find dit nærmeste Makerspace, og bliv en del af fælleskabet.</p>
+            <button class="btn-cta">Bliv medlem</button>
+        </div>
+        <div class="login-illustration">
+            <img src="~/css/img/workshop.jpg" alt="Alternate Text" />
+        </div>
+    </section>
+    <section class="grid-content-2">
+        <div class="box">
+            <h2 class="header-title">Find dit nærmeste Makerspace</h2>
+        </div>
+        <div class="filter-function">
+            <input type="text" id="myInput" onkeyup="" placeholder="F.eks. Odense">
+        </div>
+        <div class="map-img">
+            <img src="~/css/img/workshop.jpg" alt="Alternate Text" />
+        </div>
+    </section>
+    <section class="grid-content-3">
+        <div class="grid-img-1">
+            <img src="~/css/img/happy-people.jpg" alt="Alternate Text" />
+        </div>
+        <div class="grid-item-2">
+            <h2 class="header-title">Hvem er vi?</h2>
+            <p>
+                MakersofDenmark består af et community, som forsøger at gøre det nemt og tilgængigt for brugere, at skabe sig et overblik over hvilke faciliteter der tilbydes. På nuværende tidspunkt findes der over 100+ Fablabs på nationalt plan, og dette forsætter med at stige år efter år.
+            </p>
+            <button class="btn-cta">Læs mere</button>
+        </div>
+    </section>
+    <section class="grid-content-3">
+        <div class="box">
+            <h2 class="header-title">Bliv en del af fællesskabet</h2>
+            <p>
+                Ønsker du at være en del af et solidt fællesskab, som er passioneret inden for den kreative verden,
+                så er Makers of Denmark stedet for dig. Dine kreative sanser vil blive udfordret, samt der vil være oplæring af nye teknologier.
+            <p />
+            <button class="btn-cta">Opret her</button>
+        </div>
+        <div class="side-img">
+            <img src="~/css/img/fun-enviroment.jpg" alt="Alternate Text" />
+        </div>
+    </section>
+
+
+</main>
+

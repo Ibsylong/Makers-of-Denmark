@@ -1,50 +1,59 @@
 ﻿@{
     ViewData["Title"] = "Event";
 }
+<partial name="../Shared/_TopNavBar.cshtml">
+
 <main class="event">
 
-    <section class="intro-section">
+    <section class="event-section">
+            <h1 class="title">Title title</h1>
+            <div class="intro">
+                <img src="/css/img/workshop.jpg" alt="" class="event-icon">
+                <div>
+                    <p class="">Makerspace</p>
+                    <p class="">Date date</p>
+                </div>
+                <button class="button">Tilmeld</button>
+            </div>
 
-        <h1 class="">Title title</h1>
-        <img src="" alt="" class="event-icon">
-        <p class="">Makerspace</p>
-        <p class="">Date date</p>
-        <button class=""></button>
+            <div class="event-container">
+                <div class="description">
+                    <h2 class="">Beskrivelse</h2>
+                    <p class="">text text</p>
+                    <img src="" alt="" class="">
+                    <h2 class="">Titel</h2>
+                    <p class="">text text</p>
+                </div>
 
+                <div class="participants">
+
+                    <h2 class="">Deltagere</h2>
+                    <p class="">Se mere</p>
+                    <div class="participants-grid">
+                        <div class="participant-card"><h2>Card</h2></div>
+                        <div class="participant-card"><h2>Card</h2></div>
+                        <div class="participant-card"><h2>Card</h2></div>
+                        <div class="participant-card"><h2>Card</h2></div>
+                        <div class="participant-card"><h2>Card</h2></div>
+                        <div class="participant-card"><h2>Card</h2></div>
+                    </div>
+                </div>
+            </div>
     </section>
 
-    <aside>
 
+    <aside class="infobox-container">
         <div class="info-box">
-            <p class="">Generel info</p>
-            <p class="">Tidspunkt</p>
-            <p class="">Date date time</p>
-            <p class="">Max deltagere</p>
-            <p class="">Badge</p>
-            <img src="" alt="" class="">
+            <p class="box-text">Generel info</p>
+            <p class="box-text">Tidspunkt</p>
+            <p class="box-text">Date date time</p>
+            <p class="box-text">Max deltagere</p>
+            <p class="box-text">Badge</p>
+            <img src="/css/img/workshop.jpg" alt="" class="badge">
         </div>
 
-        <img src="" alt="" class="">
+        <img src="/css/img/workshop.jpg" alt="" class="box-map">
 
     </aside>
-
-    <section class="">
-
-        <section class="description">
-            <h2 class="">Beskrivelse</h2>
-            <p class="">text text</p>
-            <img src="" alt="" class="">
-            <h2 class="">Titel</h2>
-            <p class="">text text</p>
-        </section>
-
-        <section class="participants">
-
-            <h2 class="">Deltagere</h2>
-            <p class="">Se mere</p>
-            <!-- Indsæt "kort" til grid view af deltagere -->
-
-        </section>
-    </section>
 
 </main>

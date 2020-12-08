@@ -4,10 +4,9 @@
 .explore {
     width: 80%;
     margin: 0 auto;
+    //skal ændres
+    background-color: aliceblue;
 }
-
-
-
 
 //Intro sektion
 .intro-section {
@@ -48,12 +47,28 @@
     display: inline-flex;
     justify-content: space-between;
     width: 100%;
+    margin: 5vh 0 1rem 0
 }
 
 .link-text {
     margin-top: 1rem;
 }
 
-.gridview {
-    height: 50vh;
+
+.scrolling-wrapper-flexbox {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  
+  .card {
+    flex: 0 0 auto;
+  }
+}
+
+.card {
+  border: 2px solid red;
+  width: 15rem;
+  height: 22rem;
+  margin: 0 6rem 0 0;
+  background: white;
 }
