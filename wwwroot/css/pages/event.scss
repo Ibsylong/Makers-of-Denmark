@@ -10,18 +10,21 @@
 }
 
 .infobox-container {
-    width: 15vw;
-    background-color: grey;
+    margin-top: 5vh;
+    width: 22vw;
 }
 
 .event-section {
-    width: 60vw;
-    margin: 2rem 5rem 0 0;
+    width: 100%;
+    margin: 5vh 2vw 0 0;
 }
 
 //Event sektion
 .event-container {
+    width: 100%;
+    margin: 0 auto;
     background-color: white;
+    padding: $padding-sm $padding-lg $padding-sm $padding-lg;
 }
 
 .intro {
@@ -44,4 +47,40 @@
     height: 8vh;
     border-radius: 5rem 5rem;
     margin-right: 1rem;
+}
+
+//deltager sektion i event sektion
+.participants-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.participant-card {
+    width: 11vw;
+    height: 23vh;
+    border-color: black;
+    border: solid;
+    margin: 1rem 1rem 0 1rem;
+}
+
+//Info box
+.info-box {
+    background-color: white;
+}
+
+.box-text {
+    margin: 5px 5px 0 5px;
+}
+
+.badge {
+    width: 5vw;
+    height: 5vh;
+    border-radius: 5rem 5rem;
+}
+
+.box-map {
+    width: 15vw;
+    height: 15vh;
+    margin-top: 3vh;
 }
