@@ -30,7 +30,9 @@ input {
 }
 
 
-button {
+button, .btn {
+    text-align: center;
+    display: inline-block;
     border: none;
     background-color: $color-primary;
     border-radius: $border-radius-sm;
