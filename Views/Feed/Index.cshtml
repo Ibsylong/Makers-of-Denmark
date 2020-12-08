@@ -7,38 +7,36 @@
     <div class="feed">
         <div>
             <h1>Velkommen</h1><br />
-                <div class="makerspaces">
-                    <h2 class="makerspacelabel">Makerspaces</h2>
-                    <table class="makerspacestable">
-                        <thead>
-                            <tr>
-                                <th>
-                                    @Html.DisplayNameFor(model => model.logoUrl)
-                                </th>
-                                <th>
-                                    @Html.DisplayNameFor(model => model.name)
-                                </th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach (var item in Model)
-                            {
-                            <tr>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.logoUrl)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.name)
-                                </td>
-                                <td>
-                                    <a asp-action="#" asp-route-id="#item.id*">+Se mere</a>
-                                </td>
-                            </tr>
-                            }
-                        </tbody>
-                    </table>
-                </div>
+                              <div class="makerspaces">
+                                  <h2 class="makerspacelabel">Makerspaces</h2>
+                                  <table class="makerspacestable">
+                                      <thead>
+                                          <tr>
+                                              <th>
+
+                                              </th>
+                                              <th>
+
+                                              </th>
+                                              <th></th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                          @foreach (var item in Model)
+                                          {
+                                              <tr>
+                                                  <td>
+                                                      <img src="@Url.Content(item.logoUrl)" alt="Image" />
+                                                  </td>
+                                                  <td>
+                                                      @Html.DisplayFor(modelItem => item.name)
+                                                  </td>
+                                              </tr>
+                                          }
+                                      </tbody>
+                                  </table>
+                                  <a asp-action="#" asp-route-id="#item.id*">+Se mere</a>
+                              </div>
         </div>
         <div>
             <label>Seneste opslag</label>
