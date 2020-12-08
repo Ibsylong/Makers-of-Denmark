@@ -13,29 +13,29 @@
                         <thead>
                             <tr>
                                 <th>
-                                    @*@Html.DisplayNameFor(model => model.logoUrl)*@
+                                    @Html.DisplayNameFor(model => model.logoUrl)
                                 </th>
                                 <th>
-                                    @*@Html.DisplayNameFor(model => model.name)*@
+                                    @Html.DisplayNameFor(model => model.name)
                                 </th>
                                 <th></th>
                             </tr>
                         </thead>
                         <tbody>
-                            @*@foreach (var item in Model)
-                            {*@
+                            @foreach (var item in Model)
+                            {
                             <tr>
                                 <td>
-                                    @*@Html.DisplayFor(modelItem => item.logoUrl)*@
+                                    @Html.DisplayFor(modelItem => item.logoUrl)
                                 </td>
                                 <td>
-                                    @*@Html.DisplayFor(modelItem => item.name)*@
+                                    @Html.DisplayFor(modelItem => item.name)
                                 </td>
                                 <td>
-                                    @*<a asp-action="#" asp-route-id="#item.id*">+Se mere</a>*@
+                                    <a asp-action="#" asp-route-id="#item.id*">+Se mere</a>
                                 </td>
                             </tr>
-                            @*}*@
+                            }
                         </tbody>
                     </table>
                 </div>
