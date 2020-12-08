@@ -3,18 +3,18 @@
 // GLOBAL
 
 .explore {
+    background-color: $color-background;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+}
+
+.explore-wrapper {
     width: 80%;
     margin: 0 auto;
-    //skal ændres
-    background-color: $color-background;
 }
 
 //Intro sektion
 .intro-section {
-    // Fjern margins efter styling
-    margin-top: 3vh;
-    margin-bottom: 3vh;
-
     display: flex;
     grid-template-columns: repeat(2,auto);
 }

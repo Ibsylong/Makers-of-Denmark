@@ -3,8 +3,13 @@
 //GLOBAL
 .event {
     background-color: aliceblue;
+}
+
+.event-wrapper {
     width: 80%;
     margin: 0 auto;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
     display: flex;
     grid-template-columns: repeat(2,auto);
 }
