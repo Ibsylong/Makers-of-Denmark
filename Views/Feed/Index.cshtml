@@ -1,8 +1,55 @@
-﻿@{
-    ViewData["Title"] = "Feed";
+﻿@model IEnumerable<Makers_of_Denmark.Models.Makerspace>
+@{
+    ViewData["Title"] = "Hjem";
 }
+<partial name="~/Views/Shared/_TopNavBar.cshtml" />
+<div class="feed-wrapper">
     <div class="feed">
-        <div style="align-content:center; text-align:center; width:33%; float:left;">Makerspace</div>
-        <div style="align-content:center; text-align:center; width:33%; float:left;">Feed</div>
-        <div style="align-content: center; text-align: center; width: 33%; float: left;">Events</div>
+        <div>
+            <h1>Velkommen</h1><br />
+                <div class="makerspaces">
+                    <h2 class="makerspacelabel">Makerspaces</h2>
+                    <table class="makerspacestable">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @*@Html.DisplayNameFor(model => model.logoUrl)*@
+                                </th>
+                                <th>
+                                    @*@Html.DisplayNameFor(model => model.name)*@
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @*@foreach (var item in Model)
+                            {*@
+                            <tr>
+                                <td>
+                                    @*@Html.DisplayFor(modelItem => item.logoUrl)*@
+                                </td>
+                                <td>
+                                    @*@Html.DisplayFor(modelItem => item.name)*@
+                                </td>
+                                <td>
+                                    @*<a asp-action="#" asp-route-id="#item.id*">+Se mere</a>*@
+                                </td>
+                            </tr>
+                            @*}*@
+                        </tbody>
+                    </table>
+                </div>
+        </div>
+        <div>
+            <label>Seneste opslag</label>
+        </div>
+        <div>
+            <div class="eventsnearby">
+                <label>Events i nærheden</label>
+            </div>
+            <div class="yourevents">
+                <label>Dine events</label>
+            </div>
+        </div>
     </div>
+</div>
