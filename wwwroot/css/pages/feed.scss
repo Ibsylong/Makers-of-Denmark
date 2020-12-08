@@ -1,3 +1,39 @@
-﻿.feed {
-    background-color:green;
+﻿@import "../variables.scss";
+
+.feed-wrapper {
+    height: 100%;
+    background-image: url("img/backgroundFeed.png");
+    background-color: #cccccc;
 }
+.feed {
+    display: grid;
+    min-height: 100vh;
+    padding-top: 24px;
+    grid-template-columns: auto auto auto;
+
+    .makerspacelabel {
+        color: #FB7167;
+        text-align: center;
+        align-content: center;
+    }
+
+    .makerspaces {
+        border-bottom: 1px solid $color-faded;
+    }
+
+    .label {
+        margin-top: 24px;
+        color: $color-text-1;
+    }
+
+    h1 {
+        text-align: center;
+        align-content: center;
+        color: $color-text-1;
+    }
+
+    .eventsnearby {
+        border-bottom: 1px solid $color-faded;
+    }
+}
+

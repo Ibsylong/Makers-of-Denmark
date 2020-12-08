@@ -1,59 +1,71 @@
 ﻿@import "../variables.scss";
 
 #home {
-    background-color: white;
+    background-color: aliceblue;
+
+
+    .grid-content {
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        grid-gap: 3rem;
+        padding: 2rem;
+        align-items: center;
+        margin: 0 auto;
+        width: 80%;
+        margin-bottom: 5rem;
+
+        .btn-cta {
+            margin-top: 1rem;
+            width: 10rem;
+        }
+    }
+
+    .grid-content-2 {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-gap: 1rem;
+        padding: 2rem;
+        align-items: center;
+        margin: 0 auto;
+        width: 80%;
+
+        .filter-function {
+            width: 50%;
+        }
+
+        .map-img {
+        }
+    }
+
+     .grid-content-3 {
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        grid-gap: 3rem;
+        padding: 2rem;
+        align-items: center;
+        margin: 0 auto; 
+        width: 80%;
+        height: 60vh;
+        background-color: white;
+        margin-top: 5rem;
+
+        .side-img {
+            background-image: url("img/happy-people.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 80vw;
+            width: 100%;
+        }
+
+
+        .btn-cta {
+            margin-top: 1rem;
+            width: 10rem;
+        }
+    }
+
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    grid-template-rows: repeat(1, 2fr);
-    grid-gap: 3rem;
-    padding: 2rem;
-    align-items: center;
-    margin: 0 auto;
-    width: 80%;
 
 
-    .btn-sign-up {
-        margin-top: 1rem;
-        width: 10vw;
-    }
 
-    .login-illustration {
-
-    }
-
-    h2 {
-        color: blue;
-    }
-
-    
-}
-
-/* Kort funktion */
-
-.grid-1 {
-    display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    grid-template-rows: repeat(1, 2fr);
-    grid-gap: 3rem;
-    padding: 2rem;
-    align-items: center;
-    margin: 0 auto;
-    width: 80%;
-    background-color: lightblue;
-
-
-    .box {
-    }
-
-    .btn-sign-up {
-        margin-top: 1rem;
-        width: 10vw;
-    }
-
-    .side-img {
-        background-image: url(../img/happy-people.jpg);
-    }
-}
