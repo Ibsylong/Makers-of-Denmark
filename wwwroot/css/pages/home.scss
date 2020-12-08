@@ -2,6 +2,7 @@
 
 #home {
     background-color: aliceblue;
+    
 
 
     .grid-content {
@@ -14,10 +15,13 @@
         width: 80%;
         margin-bottom: 5rem;
 
+
         .btn-cta {
             margin-top: 1rem;
             width: 10rem;
         }
+        
+
     }
 
     .grid-content-2 {
@@ -45,16 +49,21 @@
         align-items: center;
         margin: 0 auto; 
         width: 80%;
-        height: 60vh;
+        height: 70vh;
         background-color: white;
         margin-top: 5rem;
 
         .side-img {
-            background-image: url("img/happy-people.jpg");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 80vw;
-            width: 100%;
+
+        }
+
+        .box {
+            justify-self: center;
+            
+        }
+
+        .box {
+            justify-self: center;
         }
 
 
