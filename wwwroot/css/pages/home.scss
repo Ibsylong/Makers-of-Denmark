@@ -2,7 +2,6 @@
 
 #home {
     background-color: aliceblue;
-    
 
 
     .grid-content {
@@ -37,8 +36,10 @@
             width: 50%;
         }
 
-        .map-img {
+        #map {
+            height: 100vh;
         }
+
     }
 
      .grid-content-3 {
