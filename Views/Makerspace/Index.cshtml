@@ -1,36 +1,39 @@
-﻿@{
-    ViewData["Title"] = "Event";
+﻿@model Makers_of_Denmark.Models.Makerspace;
+@{
+    ViewData["Title"] = "Makerspace";
 }
+
 <partial name="../Shared/_TopNavBar.cshtml">
 
-<main class="makerspace">
-    <div class="makerspace-wrapper">
+    <main class="makerspace">
+        <div class="makerspace-wrapper">
 
-        <section class="intro-section">
-            <h1 class="title"><!--Api data-->Title title</h1>
-            <div class="intro">
-                <img src="#" alt=""/> <!--Billede fra data-->
-                <div>
-                    <p>Beskrivelse</p> <!--Beskrivelse fra data-->
-                    <button class="button">Bliv medlem</button>
-                </div>
-            </div>
-
-            <div class="tab-container">
-                <div class="">
-                    <!--Indsæt tabs her-->
+            <section class="intro-section">
+                <h1 class="title">@Model.name @Model.id</h1>
+                <div class="intro">
+                    <img src="#" alt="" /> <!--Billede fra data-->
+                    <div>
+                        <p>Beskrivelse</p> <!--Beskrivelse fra data-->
+                        <button class="button">Bliv medlem</button>
+                    </div>
                 </div>
 
-            </div>
-        </section>
+                <div class="tab-container">
+                    <div class="">
+                        <!--Indsæt tabs her-->
+                    </div>
+
+                </div>
+            </section>
 
 
-        <aside class="infobox-container">
-            <div class="info-box">
+            <aside class="infobox-container">
+                <div class="info-box">
 
-            </div>
+                </div>
 
-        </aside>
-    </div>
+            </aside>
+        </div>
 
-</main>
+    </main>
+
