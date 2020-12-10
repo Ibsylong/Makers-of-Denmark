@@ -15,6 +15,5 @@ namespace Makers_of_Denmark.Models
         public string logoUrl { get; set; }
         public string accessType { get; set; }
         public string organization { get; set; }
-        public string[] tools { get; set; }
     }
 }
