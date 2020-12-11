@@ -16,7 +16,7 @@ namespace Makers_of_Denmark.Controllers
         public MakerspaceController()
         {
             // Set the port to whatever the API port is once you've started it once. Shouldn't change on restarts.
-            BaseEndPoint = new Uri("https://makersofdenmark.azurewebsites.net");
+            BaseEndPoint = new Uri("https://makersofdenmark.azurewebsites.net/");
             _httpClient = new HttpClient();
         }
         public async Task<IActionResult> IndexAsync()
@@ -29,9 +29,9 @@ namespace Makers_of_Denmark.Controllers
             var data = await response.Content.ReadAsStringAsync();
             // Treat the response body string as JSON, and deserialize it into a list of flights
 
-            Makerspace Makerspace = JsonConvert.DeserializeObject<Makerspace>(data);
+            MakerspacesModel makerspacesModel = JsonConvert.DeserializeObject<MakerspacesModel>(data);
 
-            return View(Makerspace);
+            return View(makerspacesModel.makerSpaces);
         }
     }
 }

@@ -1,39 +1,18 @@
-﻿@model Makers_of_Denmark.Models.Makerspace;
+﻿@model IEnumerable<Makers_of_Denmark.Models.Makerspace>
+
 @{
-    ViewData["Title"] = "Makerspace";
+    ViewData["Title"] = "Index";
 }
 
-<partial name="../Shared/_TopNavBar.cshtml">
+<h1>Index</h1>
 
-    <main class="makerspace">
-        <div class="makerspace-wrapper">
-
-            <section class="intro-section">
-                <h1 class="title">@Model.name, @Html.ViewData.Model</h1>
-                <div class="intro">
-                    <img src="#" alt="" /> <!--Billede fra data-->
-                    <div>
-                        <p>Beskrivelse</p> <!--Beskrivelse fra data-->
-                        <button class="button">Bliv medlem</button>
-                    </div>
-                </div>
-
-                <div class="tab-container">
-                    <div class="">
-                        <!--Indsæt tabs her-->
-                    </div>
-
-                </div>
-            </section>
-
-
-            <aside class="infobox-container">
-                <div class="info-box">
-
-                </div>
-
-            </aside>
-        </div>
-
-    </main>
-
+<div>
+    <h4>MakerspacesModel</h4>
+    <hr />
+    <dl class="row">
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>
