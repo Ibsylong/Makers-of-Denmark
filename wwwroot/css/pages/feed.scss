@@ -1,65 +1,70 @@
 ﻿@import "../variables.scss";
 
-html, body, .feed-wrapper {
-    height: 100%;
-    width: 100%;
-    background-image: url("img/backgroundFeed.png");
-    background-color: #cccccc;
-    background-size: 100%;
-}
-.footer {
-    background: blue;
-}
-.feed {
-    display: flex;
-    height: 100vh;
-    padding-top: 24px;
-}
-.makerspacelabel {
-    color: #FB7167;
-    text-align: center;
-    align-content: center;
-}
+.feed-wrapper {
+    html, body, .feed-wrapper {
+        height: 100%;
+        width: 100%;
+        background-image: url("img/backgroundFeed.png");
+        background-color: #cccccc;
+        background-size: 100%;
+    }
 
-.makerspaces {
-    border-bottom: 1px solid $color-faded;
-    flex: 1;
-}
+    .footer {
+        background: blue;
+    }
 
-.label {
-    margin-top: 24px;
-    color: $color-text-1;
-}
+    .feed {
+        display: flex;
+        height: 100vh;
+        padding-top: 24px;
+    }
 
-h1 {
-    text-align: center;
-    align-content: center;
-    color: $color-text-1;
-}
+    .makerspacelabel {
+        color: #FB7167;
+        text-align: center;
+        align-content: center;
+    }
 
-.eventsnearby {
-    border-bottom: 1px solid $color-faded;
-    flex: 1;
-}
+    .makerspaces {
+        border-bottom: 1px solid $color-faded;
+        flex: 1;
+    }
 
-.feed-content {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: auto;
-}
+    .label {
+        margin-top: 24px;
+        color: $color-text-1;
+    }
 
-.feed-field {
-    flex: 1;
-    overflow-y: auto; /*added*/
-    min-height: 0px;
-}
+    h1 {
+        text-align: center;
+        align-content: center;
+        color: $color-text-1;
+    }
 
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
-    text-align: center;
-    padding: 16px;
-    border: hidden;
-    background-color: $color-white;
+    .eventsnearby {
+        border-bottom: 1px solid $color-faded;
+        flex: 1;
+    }
+
+    .feed-content {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: auto;
+    }
+
+    .feed-field {
+        flex: 1;
+        overflow-y: auto; /*added*/
+        min-height: 0px;
+    }
+
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+        text-align: center;
+        padding: 16px;
+        border: hidden;
+        background-color: $color-white;
+    }
 }
 
