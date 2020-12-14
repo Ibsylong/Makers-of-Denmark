@@ -7,39 +7,61 @@
     <div class="feed">
         <div>
             <h1>Velkommen</h1><br />
-                              <div class="makerspaces">
-                                  <h2 class="makerspacelabel">Makerspaces</h2>
-                                  <table class="makerspacestable">
-                                      <thead>
-                                          <tr>
-                                              <th>
+            <div class="makerspaces">
+                <h2 class="makerspacelabel">Makerspaces</h2>
+                <table class="makerspacestable">
+                    <thead>
+                        <tr>
+                            <th>
 
-                                              </th>
-                                              <th>
+                            </th>
+                            <th>
 
-                                              </th>
-                                              <th></th>
-                                          </tr>
-                                      </thead>
-                                      <tbody>
-                                          @foreach (var item in Model)
-                                          {
-                                              <tr>
-                                                  <td>
-                                                      <img src="@Url.Content(item.logoUrl)" alt="Image" />
-                                                  </td>
-                                                  <td>
-                                                      @Html.DisplayFor(modelItem => item.name)
-                                                  </td>
-                                              </tr>
-                                          }
-                                      </tbody>
-                                  </table>
-                                  <a asp-action="#" asp-route-id="#item.id*">+Se mere</a>
-                              </div>
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    <img src="@Url.Content(item.logoUrl)" alt="" />
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.name)
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <a asp-action="#" asp-route-id="#item.id*">+Se mere</a>
+            </div>
         </div>
         <div>
-            <label>Seneste opslag</label>
+            <div class="feed-content">
+                <label>Seneste opslag</label>
+                <div class="feed-field">
+                    <div class="card">1</div>
+                    <div class="card">2</div>
+                    <div class="card">3</div>
+                    <div class="card">4</div>
+                    <div class="card">5</div>
+                    <div class="card">6</div>
+                    <div class="card">7</div>
+                    <div class="card">8</div>
+                    <div class="card">9</div>
+                    <div class="card">10</div>
+                    <div class="card">11</div>
+                    <div class="card">12</div>
+                    <div class="card">10</div>
+                    <div class="card">11</div>
+                    <div class="card">12</div>
+                    <div class="card">10</div>
+                    <div class="card">11</div>
+                    <div class="card">12</div>
+                </div>
+            </div>
         </div>
         <div>
             <div class="eventsnearby">
@@ -49,5 +71,8 @@
                 <label>Dine events</label>
             </div>
         </div>
+    </div>
+    <div class="footer">
+        Footer
     </div>
 </div>

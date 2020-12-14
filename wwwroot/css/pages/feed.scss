@@ -1,40 +1,65 @@
 ﻿@import "../variables.scss";
 
-.feed-wrapper {
+html, body, .feed-wrapper {
     height: 100%;
+    width: 100%;
     background-image: url("img/backgroundFeed.png");
     background-color: #cccccc;
     background-size: 100%;
 }
+.footer {
+    background: blue;
+}
 .feed {
-    display: grid;
-    min-height: 100vh;
+    display: flex;
+    height: 100vh;
     padding-top: 24px;
-    grid-template-columns: auto auto auto;
+}
+.makerspacelabel {
+    color: #FB7167;
+    text-align: center;
+    align-content: center;
+}
 
-    .makerspacelabel {
-        color: #FB7167;
-        text-align: center;
-        align-content: center;
-    }
+.makerspaces {
+    border-bottom: 1px solid $color-faded;
+    flex: 1;
+}
 
-    .makerspaces {
-        border-bottom: 1px solid $color-faded;
-    }
+.label {
+    margin-top: 24px;
+    color: $color-text-1;
+}
 
-    .label {
-        margin-top: 24px;
-        color: $color-text-1;
-    }
+h1 {
+    text-align: center;
+    align-content: center;
+    color: $color-text-1;
+}
 
-    h1 {
-        text-align: center;
-        align-content: center;
-        color: $color-text-1;
-    }
+.eventsnearby {
+    border-bottom: 1px solid $color-faded;
+    flex: 1;
+}
 
-    .eventsnearby {
-        border-bottom: 1px solid $color-faded;
-    }
+.feed-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: auto;
+}
+
+.feed-field {
+    flex: 1;
+    overflow-y: auto; /*added*/
+    min-height: 0px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    text-align: center;
+    padding: 16px;
+    border: hidden;
+    background-color: $color-white;
 }
 
