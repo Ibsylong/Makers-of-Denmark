@@ -23,16 +23,16 @@ namespace Makers_of_Denmark.Controllers
 
         [Route("[controller]/{id?}")]
         // GET: Makerspace/5
-        public async Task<IActionResult> Get(string? id)
+        public async Task<IActionResult> IndexAsync(string? id)
         {
             // use HTTP client to read data from API. Move on once the headers have been read. Errors are caught slightly quicker this way.
-            var response = await _httpClient.GetAsync(BaseEndPoint + "/MakerSpace", HttpCompletionOption.ResponseHeadersRead);
+            var response = await _httpClient.GetAsync(BaseEndPoint + "/makerspace/" + id, HttpCompletionOption.ResponseHeadersRead);
             // Make sure that we got a success status code in the headers. Returns an exception (and 500 status code) if not successful
             response.EnsureSuccessStatusCode();
             // Turn the response body into a string
             var data = await response.Content.ReadAsStringAsync();
             // Treat the response body string as JSON, and deserialize it into a list of flights
-            MakerspacesModel makerSpaces = JsonConvert.DeserializeObject<MakerspacesModel>(data);
+            Makerspace makerspace = JsonConvert.DeserializeObject<Makerspace>(data);
 
             if (id == null)
             {
@@ -44,7 +44,7 @@ namespace Makers_of_Denmark.Controllers
                 return NotFound();
             }
 
-            return View(makerSpaces);
+            return View(makerspace);
         }
     }
 }
