@@ -11,14 +11,14 @@
         .container {
             background: white;
             padding: 3rem;
-            margin-bottom: 3rem;
-            border-radius: $border-radius-md
+            border-radius: $border-radius-md;
         }
 
         .info {
             display: grid;
             grid-template-columns: repeat(2,auto);
-            grid-row-gap: 2rem;
+            grid-row-gap: 3rem;
+            margin-bottom: 3rem;
 
             h2 {
                 text-align: center;
@@ -62,7 +62,7 @@
 
                 & > * {
                     transition: 100ms all ease-in-out;
-                    cursor:pointer;
+                    cursor: pointer;
 
                     &:hover {
                         transform: scale(1.2);

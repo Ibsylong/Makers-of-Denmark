@@ -73,20 +73,20 @@ button, .btn {
 }
 
 .shadow-1 {
-    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.12);
-    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.24);
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.12), 
+                0px 1px 2px 0px rgba(0,0,0,0.24);
 }
 .shadow-2 {
-    box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.15);
-    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.12);
+    box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.15), 
+                0px 2px 4px 0px rgba(0,0,0,0.12);
 }
 .shadow-3 {
-    box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.15);
-    box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.10);
+    box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.15), 
+                0px 3px 6px 0px rgba(0,0,0,0.10);
 }
 .shadow-4 {
-    box-shadow: 0px 15px 25px 0px rgba(0,0,0,0.15);
-    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.05);
+    box-shadow: 0px 15px 25px 0px rgba(0,0,0,0.15), 
+                0px 5px 10px 0px rgba(0,0,0,0.05);
 }
 .shadow-5 {
     box-shadow: 0px 20px 40px 0px rgba(0,0,0,0.20);
