@@ -6,16 +6,14 @@ html, body, .feed-wrapper {
     background-image: url("img/backgroundFeed.png");
     background-color: #cccccc;
     background-size: 100%;
-    overflow: hidden;
 }
 .footer {
     background: blue;
 }
 .feed {
-    display: grid;
+    display: flex;
     height: 100vh;
     padding-top: 24px;
-    grid-template-columns: auto auto auto;
 }
 .makerspacelabel {
     color: #FB7167;
@@ -25,6 +23,7 @@ html, body, .feed-wrapper {
 
 .makerspaces {
     border-bottom: 1px solid $color-faded;
+    flex: 1;
 }
 
 .label {
@@ -40,18 +39,20 @@ h1 {
 
 .eventsnearby {
     border-bottom: 1px solid $color-faded;
+    flex: 1;
 }
 
 .feed-content {
-    display: grid;
-    grid-template-columns: auto;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: auto;
 }
 
 .feed-field {
-    display: grid;
-    grid-auto-rows: 150px;
-    grid-gap: 10px;
+    flex: 1;
     overflow-y: auto; /*added*/
+    min-height: 0px;
 }
 
 .card {
