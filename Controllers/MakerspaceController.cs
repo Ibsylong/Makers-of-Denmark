@@ -19,6 +19,7 @@ namespace Makers_of_Denmark.Controllers
             BaseEndPoint = new Uri("https://makersofdenmark.azurewebsites.net/");
             _httpClient = new HttpClient();
         }
+
         public async Task<IActionResult> IndexAsync()
         {
             // use HTTP client to read data from API. Move on once the headers have been read. Errors are caught slightly quicker this way.
@@ -32,6 +33,29 @@ namespace Makers_of_Denmark.Controllers
             MakerspacesModel makerspacesModel = JsonConvert.DeserializeObject<MakerspacesModel>(data);
 
             return View(makerspacesModel.makerSpaces);
+        }
+
+        // GET: Makerspace/Details/5
+        public async Task<IActionResult> Details(string? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var response = await _httpClient.GetAsync(BaseEndPoint + "/MakerSpace", HttpCompletionOption.ResponseHeadersRead);
+            response.EnsureSuccessStatusCode();
+
+            var data = await response.Content.ReadAsStringAsync();
+
+            Makerspace makerspace = JsonConvert.DeserializeObject<Makerspace>(data);
+
+            if (data == null)
+            {
+                return NotFound();
+            }
+
+            return View(id);
         }
     }
 }
