@@ -38,16 +38,26 @@
             }
 
             #map {
-                height: 100vh;
+                height: 800px;
             }
         }
 
         .grid-container-3 {
             display: grid;
-            grid-template-columns: repeat(2, 2fr);
+            grid-template-columns: repeat(2, 50%);
             margin-top: 5rem;
             align-items: center;
             background-color: white;
+            border-radius: $border-radius-md;
+            overflow: hidden;
+
+            .box{
+                padding: 5rem;
+            }
+
+            img {
+                width: 100%
+            }
         }
 
     }
