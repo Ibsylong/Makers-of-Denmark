@@ -40,33 +40,17 @@
             <h1>Velkommen</h1><br />
             <div class="makerspaces">
                 <h2 class="makerspacelabel">Makerspaces</h2>
-                <table class="makerspacestable">
-                    <thead>
-                        <tr>
-                            <th>
-
-                            </th>
-                            <th>
-
-                            </th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var item in Model)
-                        {
-                            <tr>
-                                <td>
-                                    <img src="@Url.Content(item.logoUrl)" alt="" />
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.name)
-                                </td>
-                            </tr>
-                        }
-                    </tbody>
-                </table>
-                <a asp-action="#" asp-route-id="#item.id*">+Se mere</a>
+                <div class="makerspace-list">
+                    @foreach (var item in Model)
+                    {
+                    <div>
+                        @*<img src="@Url.Content(item.logoUrl)" alt="" />*@
+                        <img src="~/css/img/badges/020-badge.png" />
+                        <h3>@Html.DisplayFor(modelItem => item.name)</h3>
+                    </div>
+                    }
+                </div>
+                <a class="underline" asp-area="" asp-controller="Profile">+ Se mere</a>
             </div>
         </div>
     </div>
