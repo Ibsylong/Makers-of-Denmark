@@ -2,7 +2,7 @@
 
 //GLOBAL
 .makerspace {
-    background-color: aliceblue;
+    background-color: $color-background;
 }
 
 .makerspace-wrapper {
@@ -14,14 +14,22 @@
     grid-template-columns: repeat(2,auto);
 }
 
-.infobox-container {
-    margin-top: 3vh;
-    width: 22vw;
-}
-
-.intro-section {
+.makerspace-section {
     width: 100%;
     margin: 3vh 2vw 0 0;
+}
+
+.makerspace-img {
+    width: 25vw;
+}
+
+.infobox-container {
+    margin-top: 3vh;
+    width: 20%;
+}   
+
+.description-flex{
+    margin-left: 2vw;
 }
 
 //tab sektion
@@ -32,41 +40,32 @@
     padding: $padding-sm $padding-lg $padding-sm $padding-lg;
 }
 
-.intro {
+.makerspace-intro {
     display: flex;
-    grid-template-columns: (2,auto);
+    grid-template-columns: repeat(2,auto);
     width: 100%;
     margin-bottom: 2rem;
-    align-items: center;
 }
 
-.button {
-    width: 10vw;
-    height: 6vh;
-    margin-top: 0.5rem;
-    margin-left: auto;
-    align-self: end;
-}
-
-.event-icon {
-    width: 7vw;
-    height: 8vh;
-    border-radius: 5rem 5rem;
-    margin-right: 1rem;
-}
-
-.flex {
-    display: inline-flex;
-    justify-content: space-between;
-    width: 100%;
-    margin: 5vh 0 1rem 0
-}
-
-.link-text {
+.makerspace-button {
+    width: 200px;
+    height: 60px;
+    float: right;
     margin-top: 1rem;
 }
 
+.makerspace-flex {
+    display: inline-flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
 //Info box
+.infobox-container {
+    margin-top: 3vh;
+    width: 22vw;
+}
+
 .info-box {
     background-color: white;
 }
