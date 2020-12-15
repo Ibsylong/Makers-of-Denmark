@@ -1,22 +1,15 @@
 ﻿@import "../variables.scss";
 
 .feed-wrapper {
-    html, body, .feed-wrapper {
-        height: 100%;
-        width: 100%;
-        background-image: url("img/backgroundFeed.png");
-        background-color: #cccccc;
-        background-size: 100%;
-    }
-
-    .footer {
-        background: blue;
-    }
+    background-image: url("img/backgroundFeed.png");
+    background-size: 100%;
 
     .feed {
-        display: flex;
+        display: grid;
+        grid-template-columns: 20% 50% 20%;
         height: 100vh;
         padding-top: 24px;
+        gap: 5%;
     }
 
     .makerspacelabel {
@@ -54,17 +47,20 @@
     }
 
     .feed-field {
-        flex: 1;
-        overflow-y: auto; /*added*/
-        min-height: 0px;
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 100%;
+        overflow-y: auto;
+        height: 100vh;
+        padding: 1rem;
     }
 
     .card {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+        width: 100%;
         text-align: center;
         padding: 16px;
         border: hidden;
         background-color: $color-white;
+        border-radius: $border-radius-md;
     }
 }
-

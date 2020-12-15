@@ -9,7 +9,7 @@ namespace Makers_of_Denmark.Models
     {
         public string id { get; set; }
         public string name { get; set; }
-        public string address { get; set; }
+        public Address address { get; set; }
         public ContactInformation contactInformation { get; set; }
         public string vatNumber { get; set; }
         public string logoUrl { get; set; }
