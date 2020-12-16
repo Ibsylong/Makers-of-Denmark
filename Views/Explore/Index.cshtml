@@ -3,6 +3,87 @@
     ViewData["Title"] = "Explore";
 }
 <partial name="../Shared/_TopNavBar.cshtml">
+    <head>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLrHUZyHtrmof5LvZGt644w89gFc6ZN2M&callback=initMap&libraries=&v=weekly"
+                defer></script>
+        <script>
+        // Initialize and add the map
+        function initMap(){
+            // Map options
+            var options = {
+                zoom: 8,
+                center: { lat: 55.403461, lng: 10.3771453 }
+            };
+
+            // The map, centered at Denmark
+            var map = new google.maps.Map(document.getElementById('map'), options);
+
+            // Listen for click on map
+            google.maps.event.addListener(map, 'click', function(){
+            });
+
+            /*
+            // Add marker, positioned at Fablab UCL
+            var marker = new google.maps.Marker({
+                position: fablab,
+                map: map,
+            });
+
+            var infoWindow = new google.maps.InfoWindow({
+                content: '<h1>UCL Fablab</h1>'
+            });
+
+            marker.addListener('click', function () {
+                infoWindow.open(map, marker);
+            });
+            */
+
+            // Array of markers
+            var markers = [
+                {
+                    coords: { lat: 55.403461, lng: 10.3771453 },
+                    content: '<h2> Fablab UCL</h2>'
+                },
+                {
+                    coords: { lat: 55.36898271, lng: 10.4260477 },
+                    content: '<h2> Fablab SDU</h2>'
+                },
+                {
+                    coords: { lat: 56.1663124, lng: 9.5478561 },
+                    content: '<h2> Fablab Silkeborg</h2>'
+                }
+            ];
+
+            // Loop through markers
+            for (var i = 0;i < markers.length; i++) {
+                // Add marker
+                addMarker(markers[i]);
+            }
+
+            // Add Marker Function
+            function addMarker(props) {
+                var marker = new google.maps.Marker({
+                    position: props.coords,
+                    map: map,
+
+                });
+
+                // Check content
+                if (props.content) {
+                    var infoWindow = new google.maps.InfoWindow({
+                        content: props.content
+                    });
+
+                    marker.addListener('click', function () {
+                        infoWindow.open(map, marker);
+                    });
+                }
+            }
+        }
+        </script>
+
+    </head>
 
     <main class="explore" id="explore">
         <div class="explore-wrapper">
@@ -16,8 +97,8 @@
                 </div>
 
                 <div class="box2">
-                    <!--Placeholder billede-->
-                    <img src="~/css/img/workshop.jpg" class="placeholderbillede" />
+                    <div id="map">
+                    </div>
                 </div>
 
             </section>
@@ -30,19 +111,18 @@
                 <div class="scrolling-wrapper-flexbox">
                     @foreach (var item in Model)
                     {
-                    <a asp-area="" asp-controller="Makerspace" asp-route-id="@item.id">
-                        <div class="card shadow-2">
-                            <a asp-area="" asp-controller="Makerspace" asp-route-id="@item.id">
+                        <a asp-area="" asp-controller="Makerspace" asp-route-id="@item.id">
+                            <div class="card shadow-2">
                                 @*<img src="@Url.Content(item.logoUrl)" alt="" />*@
                                 <img class="card-img" src="~/css/img/badges/020-badge.png" />
                                 <h3 class="card-title">@Html.DisplayFor(modelItem => item.name)</h3>
                                 <p class="card-info">@item.address.city</p>
                                 <p class="card-info">@item.address.street</p>
 
-                        </div>
-                    </a>
-                            }
-                    </div>
+                            </div>
+                        </a>
+                    }
+                </div>
 
                 <div class="flex">
                     <h2 class="title">Events i nærheden</h2>
