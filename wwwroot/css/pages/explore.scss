@@ -67,9 +67,25 @@
 }
 
 .card {
-  border: 2px solid red;
+    display: inline-block;
+  //border-radius: 15px;
   width: 15rem;
   height: 22rem;
-  margin: 0 6rem 0 0;
+  margin: 0 6rem 2rem 0;
   background: white;
+}
+
+.card-img {
+    height: 60%;
+    margin: 1rem auto;
+}
+
+.card-title {
+    margin: 1rem 0 0 0;
+    text-align: center;
+}
+
+.card-info {
+    margin: 2px 0 0 0;
+    text-align: center;
 }

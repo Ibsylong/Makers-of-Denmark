@@ -26,27 +26,31 @@
 
                 <div class="flex">
                     <h2 class="title">Makerspaces i nærheden</h2>
-                    <a class="link-text"><!--Hvis der blev lavet en fuld liste-->Se mere</a>
                 </div>
                 <div class="scrolling-wrapper-flexbox">
                     @foreach (var item in Model)
                     {
-                        <div class="card">
-                            @*<img src="@Url.Content(item.logoUrl)" alt="" />*@
-                            <img src="~/css/img/badges/020-badge.png" />
-                            <a asp-area="" asp-controller="Makerspace" asp-route-id="@item.id"><h3>@Html.DisplayFor(modelItem => item.name)</h3></a>
+                    <a asp-area="" asp-controller="Makerspace" asp-route-id="@item.id">
+                        <div class="card shadow-2">
+                            <a asp-area="" asp-controller="Makerspace" asp-route-id="@item.id">
+                                @*<img src="@Url.Content(item.logoUrl)" alt="" />*@
+                                <img class="card-img" src="~/css/img/badges/020-badge.png" />
+                                <h3 class="card-title">@Html.DisplayFor(modelItem => item.name)</h3>
+                                <p class="card-info">@item.address.city</p>
+                                <p class="card-info">@item.address.street</p>
+
                         </div>
-                    }
-                </div>
+                    </a>
+                            }
+                    </div>
 
                 <div class="flex">
                     <h2 class="title">Events i nærheden</h2>
-                    <p class="link-text"><!--Hvis der blev lavet en fuld liste-->Se mere</p>
                 </div>
                 <div class="scrolling-wrapper-flexbox">
                     <div class="card"><h2>Card</h2></div>
                     <div class="card"><h2>Card</h2></div>
-                    <div class="card"><h2>Card</h2></div>
+                    <div class="card shadow-2"><h2>Card</h2></div>
                     <div class="card"><h2>Card</h2></div>
                     <div class="card"><h2>Card</h2></div>
                     <div class="card"><h2>Card</h2></div>
