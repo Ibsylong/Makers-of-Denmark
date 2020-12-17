@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Makers_of_Denmark.Models.User
+@{
     ViewData["Title"] = "Profile";
 }
 
@@ -9,45 +10,43 @@
             <div class="avatar">
                 <img src="~/css/img/avatar.png" />
             </div>
-            <div class="info-form">
+            <form class="info-form" action="/profile" method="post">
                 <div>
-                    <label for="name">Navn</label>
-                    <input placeholder="" id="name" />
+                    <label asp-for="name">Navn</label>
+                    <input asp-for="name" />
                 </div>
                 <div>
-                    <label for="address">Addresse</label>
-                    <input placeholder="" id="address" />
+                    <label asp-for="username">Brugernavn</label>
+                    <input asp-for="username" />
                 </div>
                 <div>
-                    <label for="email">Email</label>
-                    <input placeholder="" id="email" />
+                    <label asp-for="email">Email</label>
+                    <input asp-for="email" />
                 </div>
                 <div>
-                    <label for="school">Skole/uddannelse</label>
-                    <input placeholder="" id="school" />
+                    <label asp-for="schoolName">Skole/Uddannelse</label>
+                    <input asp-for="schoolName" />
                 </div>
                 <div>
-                    <label for="password">Password</label>
-                    <input placeholder="" id="password" type="password" />
+                    <label asp-for="phone">Telefon</label>
+                    <input asp-for="phone" />
                 </div>
                 <div>
-                    <label for="phone">Tlt. nr</label>
-                    <input placeholder="" id="phone" />
+                    <label asp-for="birthday">Fødselsdag</label>
+                    <input asp-for="birthday" />
                 </div>
+                <input asp-for="id" type="hidden" />
                 <div>
-                    <label for="birthday">Fødselsdag</label>
-                    <input placeholder="" id="birthday" />
+                    <label asp-for="gender">Køn</label>
+                    @Html.DropDownListFor(model => model.gender, new List<SelectListItem>
+               {
+                   new SelectListItem{Text="Kvinde", Value="kvinde"},
+                   new SelectListItem{Text="Mand", Value="mand"},
+                   new SelectListItem{Text="Andet", Value="andet"}
+               })
                 </div>
-                <div>
-                    <label for="gender">Køn</label>
-                    <select id="gender">
-                        <option>Mand</option>
-                        <option>Kvinde</option>
-                        <option>Andet</option>
-                    </select>
-                </div>
-            </div>
-            <button>Gem</button>
+                <button type="submit">Gem</button>
+            </form>
         </div>
         <div class="container shadow-4">
             <div class="badges">
