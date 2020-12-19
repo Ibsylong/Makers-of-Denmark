@@ -21,7 +21,17 @@ namespace Makers_of_Denmark.DAL
             return user;
         }
 
-         public async Task<T> GetWithID<T>(string endpoint, string id)
+        public async Task<T> Get<T>(string endpoint)
+        {
+            var response = await _httpClient.GetAsync($"{baseEndPoint}/{endpoint}", HttpCompletionOption.ResponseHeadersRead);
+            response.EnsureSuccessStatusCode();
+            var data = await response.Content.ReadAsStringAsync();
+            T result = JsonConvert.DeserializeObject<T>(data);
+
+            return result;
+        }
+
+        public async Task<T> GetWithID<T>(string endpoint, string id)
         {
             var response = await _httpClient.GetAsync($"{baseEndPoint}/{endpoint}/{id}", HttpCompletionOption.ResponseHeadersRead);
             response.EnsureSuccessStatusCode();
