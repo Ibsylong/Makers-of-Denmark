@@ -133,8 +133,9 @@
                         <a asp-area="" asp-controller="Event" asp-route-id="@item.id">
                             <div class="card shadow-2">
                                 @*<img src="@Url.Content(item.logoUrl)" alt="" />*@
-                                <img class="card-img" src="~/css/img/badges/020-badge.png" />
+                                <img class="event-img" src="~/css/img/badges/020-badge.png" />
                                 <h3 class="card-title">@Html.DisplayFor(modelItem => item.title)</h3>
+                                <p class="card-info">Makerspace: @item.makerspace</p>
                                 <p class="card-info">@item.address</p>
                                 <p class="card-info">@item.start</p>
 
