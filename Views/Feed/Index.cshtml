@@ -8,13 +8,14 @@
         <div>
             <div class="eventsnearby">
                 <label>Events i nærheden</label>
-                <div>
+                <div class="eventsnearby-list">
                     @foreach (var item in Model.events)
                     {
-                        <div>
-                            @*<img src="@Url.Content(item.logoUrl)" alt="" />*@
-                            <h3>@Html.DisplayFor(modelItem => item.title)</h3>
-                        </div>
+                    <div>
+                        @*<img src="@Url.Content(item.logoUrl)" alt="" />*@
+                        <h3>@Html.DisplayFor(modelItem => item.title)</h3>
+                        <button class="btn-cta tilmeld-knap">Tilmeld</button>
+                    </div>
                     }
                 </div>
             </div>
