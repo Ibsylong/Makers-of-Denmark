@@ -14,7 +14,7 @@
                     <div>
                         @*<img src="@Url.Content(item.logoUrl)" alt="" />*@
                         <h3>@Html.DisplayFor(modelItem => item.title)</h3>
-                        <button class="btn-cta tilmeld-knap">Tilmeld</button>
+                        <button class="btn-cta tilmeld-knap" onclick="location.href='@Url.Action("Index", "Event", new {id = item.id})'">Tilmeld</button>
                     </div>
                     }
                 </div>
