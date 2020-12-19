@@ -52,44 +52,25 @@
             <div class="badges">
                 <h2>Mine badges</h2>
                 <div class="badge-list">
-                    <img src="~/css/img/badges/009-winner.png" />
-                    <img src="~/css/img/badges/019-trophy.png" />
-                    <img src="~/css/img/badges/022-badge-1.png" />
-                    <img src="~/css/img/badges/017-medal-2.png" />
-                    <img src="~/css/img/badges/022-badge-1.png" />
-                    <img src="~/css/img/badges/026-badge-3.png" />
-                    <img src="~/css/img/badges/028-badge-4.png" />
-                    <img src="~/css/img/badges/031-badge-7.png" />
-                    <img src="~/css/img/badges/034-medal-3.png" />
-                    <img src="~/css/img/badges/042-trophy-6.png" />
-                    <img src="~/css/img/badges/044-diploma.png" />
-                    <img src="~/css/img/badges/047-gold-medal-2.png" />
+                    @foreach (Badge badge in Model.badges)
+                    {
+                        <img src="@("/css/img/badges/" + badge.icon + ".png")" />
+                    }
                 </div>
                 <a class="see-more underline">se mere</a>
             </div>
             <div class="makerspaces">
                 <h2>Mine Makerspaces</h2>
                 <div class="makerspace-list">
-                    <div>
-                        <img src="~/css/img/badges/035-flag.png" />
-                        <h3>Fablab UCL Odense</h3>
-                    </div>
-                    <div>
-                        <img src="~/css/img/badges/044-diploma.png" />
-                        <h3>Makerspace Aarhus</h3>
-                    </div>
-                    <div>
-                        <img src="~/css/img/badges/027-trophy-2.png" />
-                        <h3>Build it!</h3>
-                    </div>
-                    <div>
-                        <img src="~/css/img/badges/036-badge-8.png" />
-                        <h3>Fablab EAL Nyborg</h3>
-                    </div>
-                    <div>
-                        <img src="~/css/img/badges/022-badge-1.png" />
-                        <h3>Fablab EAL Nyborg</h3>
-                    </div>
+                    @foreach (Makerspace makerspace in Model.makerspaces)
+                    {
+                        <div>
+                            <a asp-controller="Makerspace" asp-route-id="@makerspace.id">
+                                <img src="@("/css/img/badges/" + makerspace.logoUrl)" />
+                                <h3>@makerspace.name</h3>
+                            </a>
+                        </div>
+                    }
                 </div>
                 <a class="see-more underline">se mere</a>
             </div>

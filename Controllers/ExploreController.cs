@@ -30,6 +30,11 @@ namespace Makers_of_Denmark.Controllers
             exploreData.events = events;
             exploreData.makerSpaces = makerspaces;
 
+            foreach (var item in events)
+            {
+                item.makerspace = makerspaces.Find(x => x.id == item.makerSpaceId);
+            }
+
             return View(exploreData);
         }
     }
