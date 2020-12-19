@@ -10,6 +10,21 @@
         height: 100vh;
         padding-top: 24px;
         gap: 5%;
+
+        .eventsnearby-list {
+            & > div {
+                display: flex;
+                align-items: center;
+                margin-bottom: 1rem;
+            }
+
+            .tilmeld-knap {
+                display: inline-flex;
+                height: 3.5vh;
+                margin-left: 1rem;
+                line-height: 1vh;
+            }
+        }
     }
 
     .makerspacelabel {
@@ -80,7 +95,8 @@
         border: hidden;
         background-color: $color-white;
         border-radius: $border-radius-md;
-        p{
+
+        p {
             width: 30rem;
         }
 
@@ -88,6 +104,7 @@
             display: flex;
             align-items: center;
             margin-bottom: 1rem;
+
             img {
                 display: inline-flex;
                 width: 10%;
