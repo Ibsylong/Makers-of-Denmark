@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Makers_of_Denmark.Models.Makerspace>
+﻿@model Makers_of_Denmark.Models.FeedData
 @{
     ViewData["Title"] = "Hjem";
 }
@@ -8,6 +8,16 @@
         <div>
             <div class="eventsnearby">
                 <label>Events i nærheden</label>
+                <div>
+                    @foreach (var item in Model.events)
+                    {
+                        <div>
+                            @*<img src="@Url.Content(item.logoUrl)" alt="" />*@
+                            <img src="~/css/img/badges/020-badge.png" />
+                            <h3>@Html.DisplayFor(modelItem => item.title)</h3>
+                        </div>
+                    }
+                </div>
             </div>
             <div class="yourevents">
                 <label>Dine events</label>
@@ -166,7 +176,7 @@
             <div class="makerspaces">
                 <h2 class="makerspacelabel">Makerspaces</h2>
                 <div class="makerspace-list">
-                    @foreach (var item in Model)
+                    @foreach (var item in Model.makerSpaces)
                     {
                     <div>
                         @*<img src="@Url.Content(item.logoUrl)" alt="" />*@
