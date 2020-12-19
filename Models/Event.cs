@@ -15,6 +15,8 @@ namespace Makers_of_Denmark.Models
         public string end { get; set; }
         public string description { get; set; }
         public User[] participants { get; set; }
+        public Makerspace makerspace { get; set; }
         public string badge { get; set; }
+
     }
 }

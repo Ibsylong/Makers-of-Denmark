@@ -11,6 +11,5 @@ namespace Makers_of_Denmark.Models
         public string makerSpaceId { get; set; }
         public string make { get; set; }
         public string model { get; set; }
-
     }
 }

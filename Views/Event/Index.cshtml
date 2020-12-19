@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Makers_of_Denmark.Models.Event
+@{
     ViewData["Title"] = "Event";
 }
 <partial name="../Shared/_TopNavBar.cshtml">
@@ -8,93 +9,91 @@
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLrHUZyHtrmof5LvZGt644w89gFc6ZN2M&callback=initMap&libraries=&v=weekly"
                 defer></script>
         <script>
-        // Initialize and add the map
-        function initMap(){
-            // Map options
-            var options = {
-                zoom: 8,
-                center: { lat: 55.403461, lng: 10.3771453 }
-            };
+            // Initialize and add the map
+            function initMap() {
+                // Map options
+                var options = {
+                    zoom: 8,
+                    center: { lat: 55.403461, lng: 10.3771453 }
+                };
 
-            // The map, centered at Denmark
-            var map = new google.maps.Map(document.getElementById('map'), options);
+                // The map, centered at Denmark
+                var map = new google.maps.Map(document.getElementById('map'), options);
 
-            // Listen for click on map
-            google.maps.event.addListener(map, 'click', function(){
-            });
-
-            /*
-            // Add marker, positioned at Fablab UCL
-            var marker = new google.maps.Marker({
-                position: fablab,
-                map: map,
-            });
-
-            var infoWindow = new google.maps.InfoWindow({
-                content: '<h1>UCL Fablab</h1>'
-            });
-
-            marker.addListener('click', function () {
-                infoWindow.open(map, marker);
-            });
-            */
-
-            // Array of markers
-            var markers = [
-                {
-                    coords: { lat: 55.403461, lng: 10.3771453 },
-                    content: '<h2> Fablab UCL</h2>'
-                },
-                {
-                    coords: { lat: 55.36898271, lng: 10.4260477 },
-                    content: '<h2> Fablab SDU</h2>'
-                },
-                {
-                    coords: { lat: 56.1663124, lng: 9.5478561 },
-                    content: '<h2> Fablab Silkeborg</h2>'
-                }
-            ];
-
-            // Loop through markers
-            for (var i = 0;i < markers.length; i++) {
-                // Add marker
-                addMarker(markers[i]);
-            }
-
-            // Add Marker Function
-            function addMarker(props) {
-                var marker = new google.maps.Marker({
-                    position: props.coords,
-                    map: map,
-
+                // Listen for click on map
+                google.maps.event.addListener(map, 'click', function () {
                 });
 
-                // Check content
-                if (props.content) {
-                    var infoWindow = new google.maps.InfoWindow({
-                        content: props.content
+                /*
+                // Add marker, positioned at Fablab UCL
+                var marker = new google.maps.Marker({
+                    position: fablab,
+                    map: map,
+                });
+
+                var infoWindow = new google.maps.InfoWindow({
+                    content: '<h1>UCL Fablab</h1>'
+                });
+
+                marker.addListener('click', function () {
+                    infoWindow.open(map, marker);
+                });
+                */
+
+                // Array of markers
+                var markers = [
+                    {
+                        coords: { lat: 55.403461, lng: 10.3771453 },
+                        content: '<h2> Fablab UCL</h2>'
+                    },
+                    {
+                        coords: { lat: 55.36898271, lng: 10.4260477 },
+                        content: '<h2> Fablab SDU</h2>'
+                    },
+                    {
+                        coords: { lat: 56.1663124, lng: 9.5478561 },
+                        content: '<h2> Fablab Silkeborg</h2>'
+                    }
+                ];
+
+                // Loop through markers
+                for (var i = 0; i < markers.length; i++) {
+                    // Add marker
+                    addMarker(markers[i]);
+                }
+
+                // Add Marker Function
+                function addMarker(props) {
+                    var marker = new google.maps.Marker({
+                        position: props.coords,
+                        map: map,
+
                     });
 
-                    marker.addListener('click', function () {
-                        infoWindow.open(map, marker);
-                    });
+                    // Check content
+                    if (props.content) {
+                        var infoWindow = new google.maps.InfoWindow({
+                            content: props.content
+                        });
+
+                        marker.addListener('click', function () {
+                            infoWindow.open(map, marker);
+                        });
+                    }
                 }
             }
-        }
         </script>
 
     </head>
-
     <main class="event">
         <div class="event-wrapper">
-
             <section class="event-section">
-                <h1 class="title"><!--Api data-->Title title</h1>
+                <h1 class="title">@Model.title</h1>
                 <div class="intro">
                     <img src="/css/img/workshop.jpg" alt="" class="event-icon">
                     <div>
-                        <p class=""><!--Api data-->Makerspace</p>
-                        <p class=""><!--Api data-->Date date</p>
+                        <p class=""><!--Api data-->@Model.makerspace.name</p>
+                        <p class=""><!--Api data-->@Model.start</p>
                     </div>
                     <button class="button">Tilmeld</button>
                 </div>
@@ -102,7 +101,7 @@
                 <div class="event-container">
                     <div class="description">
                         <h2 class="">Beskrivelse</h2>
-                        <p class=""><!--Api data--> text</p>
+                        <p class=""><!--Api data--> @Model.description</p>
                         <img src="" alt="" class=""><!--Api data-->
                     </div>
 
