@@ -25,7 +25,6 @@ namespace Makers_of_Denmark.Controllers
         }
         public async Task<IActionResult> IndexAsync()
         {
-
             List<Makerspace> makerspaces = await _httpHelper.Get<List<Makerspace>>(endpoint);
             List<Event> events = await _httpHelper.Get<List<Event>>("event");
 
