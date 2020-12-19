@@ -20,6 +20,7 @@ namespace Makers_of_Denmark.Controllers
         public ExploreController()
         {
             _httpHelper = new HTTPHelper();
+            exploreData = new ExploreData();
         }
         public async Task<IActionResult> IndexAsync()
         {
