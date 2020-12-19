@@ -15,7 +15,6 @@ namespace Makers_of_Denmark.Controllers
     public class ProfileController : Controller
     {
         private HTTPHelper _httpHelper;
-        private Uri BaseEndPoint { get; set; }
         private string endpoint = "user";
 
         public ProfileController()

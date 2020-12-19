@@ -31,9 +31,9 @@ namespace Makers_of_Denmark.Controllers
             var data = await response.Content.ReadAsStringAsync();
             // Treat the response body string as JSON, and deserialize it into a list of flights
 
-            MakerspacesModel makerspacesModel = JsonConvert.DeserializeObject<MakerspacesModel>(data);
+            List<Makerspace> makerspaces = JsonConvert.DeserializeObject<List<Makerspace>>(data);
 
-            return View(makerspacesModel.makerSpaces);
+            return View(makerspaces);
         }
     }
 }

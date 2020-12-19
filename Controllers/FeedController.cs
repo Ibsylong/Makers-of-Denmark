@@ -25,9 +25,9 @@ namespace Makers_of_Denmark.Controllers
             var response = await _httpClient.GetAsync(BaseEndPoint + "/MakerSpace", HttpCompletionOption.ResponseHeadersRead);
             response.EnsureSuccessStatusCode();
             var data = await response.Content.ReadAsStringAsync();
-            MakerspacesModel makerspacesModel = JsonConvert.DeserializeObject<MakerspacesModel>(data);
+            List<Makerspace> makerspaces = JsonConvert.DeserializeObject<List<Makerspace>>(data);
 
-            return View(makerspacesModel.makerSpaces);
+            return View(makerspaces);
         }
     }
 }
