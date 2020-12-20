@@ -25,16 +25,8 @@ namespace Makers_of_Denmark.Controllers
         [Route("[controller]/{id}")]
         public async Task<IActionResult> IndexAsync(string id)
         {
-            List<User> users = await _httpHelper.Get<List<User>>(endpoint);
-            User user = users.Find(user => user.id == id);
-            
-            // Fakedata
-            foreach (var makerspace in user.makerspaces)
-            {
-                makerspace.logoUrl = FakeData.MakerspaceLogos.GetValueOrDefault(makerspace.id);
-            }
-            //
-
+            User user = await _httpHelper.GetWithID<User>(endpoint, id);
+            //user.id = id;
             return View(user);
         }
 

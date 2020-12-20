@@ -25,6 +25,7 @@ namespace Makers_of_Denmark.Controllers
             {
                 item.makerspace = await _httpHelper.GetWithID<Makerspace>("makerspace", item.makerSpaceId);
             }
+
             return View(events);
         }
     }

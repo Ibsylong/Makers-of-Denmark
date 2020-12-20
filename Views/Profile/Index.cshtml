@@ -39,11 +39,11 @@
                 <div>
                     <label asp-for="gender">Køn</label>
                     @Html.DropDownListFor(model => model.gender, new List<SelectListItem>
-               {
-                   new SelectListItem{Text="Kvinde", Value="kvinde"},
-                   new SelectListItem{Text="Mand", Value="mand"},
-                   new SelectListItem{Text="Andet", Value="andet"}
-               })
+                           {
+                               new SelectListItem{Text="Kvinde", Value="kvinde"},
+                               new SelectListItem{Text="Mand", Value="mand"},
+                               new SelectListItem{Text="Andet", Value="andet"}
+                           })
                 </div>
                 <button type="submit">Gem</button>
             </form>
@@ -69,7 +69,7 @@
                     {
                         <div>
                             <a asp-controller="Makerspace" asp-route-id="@makerspace.id">
-                                <img src="@("/css/img/badges/" + makerspace.logoUrl)" />
+                                <img src="@("/css/img/badges/" + makerspace.logoUrl + ".png")" />
                                 <h3>@makerspace.name</h3>
                             </a>
                         </div>
