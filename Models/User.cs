@@ -20,3 +20,4 @@ namespace Makers_of_Denmark.Models
         public Makerspace[] makerspaces { get; set; }
     }
 }
+
