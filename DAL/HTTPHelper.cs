@@ -43,7 +43,7 @@ namespace Makers_of_Denmark.DAL
             return result;
         }
 
-        public async Task<Task> PostWithID(string endpoint, string id, object objectData)
+        public async Task<Task> PutWithID(string endpoint, string id, object objectData)
         {
             string json = JsonConvert.SerializeObject(objectData);
             var response = await _httpClient.PutAsync(
