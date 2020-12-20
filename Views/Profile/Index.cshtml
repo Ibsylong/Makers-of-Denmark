@@ -54,7 +54,10 @@
                 <div class="badge-list">
                     @foreach (Badge badge in Model.badges)
                     {
-                        <img src="@("/css/img/badges/" + badge.icon + ".png")" />
+                        <div>
+                            <img src="@("/css/img/badges/" + badge.icon + ".png")" />
+                            <p>@badge.name</p>
+                        </div>
                     }
                 </div>
                 <a class="see-more underline">se mere</a>

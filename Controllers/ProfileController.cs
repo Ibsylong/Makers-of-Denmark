@@ -27,10 +27,13 @@ namespace Makers_of_Denmark.Controllers
         {
             List<User> users = await _httpHelper.Get<List<User>>(endpoint);
             User user = users.Find(user => user.id == id);
+            
+            // Fakedata
             foreach (var makerspace in user.makerspaces)
             {
                 makerspace.logoUrl = FakeData.MakerspaceLogos.GetValueOrDefault(makerspace.id);
             }
+            //
 
             return View(user);
         }
