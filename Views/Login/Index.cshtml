@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+<div class="login">
+    <h1 class="logo-text">
+        <a class="logo-brand" asp-controller="Home" asp-action="Index">MAKERS OF DENMARK</a></h1>
+    <div class="login-illustration">
+        @*<img src="~/css/img/workshop.jpg" />*@
+    </div>
+    <div class="login-form">
+        <div class="login-container">
+            <h1>Log ind</h1>
+            <form>
+                <label for="email">Email</label>
+                <input id="email" placeholder="youremail@mail.com" class="mb-3" />
+                <label for="password" class="mt-2">Password</label>
+                <input id="password" type="password" placeholder="" />
+            </form>
+            <button class="mt-5 mb-2">Log ind</button>
+            <a class="btn ghost" asp-controller="Register" asp-action="Index">Opret</a>
+
+            <div class="alternative-login">
+                <div>
+                    <p></p>
+                    eller log ind med
+                    <p></p>
+                </div>
+                <div>
+                    <img src="~/css/img/login-google.svg" />
+                    <img src="~/css/img/login-google.svg" />
+                </div>
+            </div>
+
+        </div>
+        <div class="register-makerspace">
+            <p>Er du ejer af et Makerspace?</p>
+            <p><a class="logo-brand" asp-controller="Register" asp-action="Index">Ansøg om oprettelse af Makerspace</a></p>
+        </div>
+    </div>
+</div>

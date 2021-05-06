@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Makers_of_Denmark.Models.Event>
+@{
+    ViewData["Title"] = "Kalender";
+}
+<partial name="~/Views/Shared/_TopNavBar.cshtml" />
+<div class="calendar-wrapper">
+    <div class="events">
+        <div class="yourevents">
+            <h1>Dine events</h1>
+            <div class="events-content">
+                @foreach (var item in Model)
+                {
+                    <a class="card shadow-3" href="@Url.Action("Index", "Event", new {id = item.id})">
+                        <div class="event-header">
+                            <img src="~/css/img/badges/020-badge.png" />
+                            <div class="event-header-text">
+                                <h3> @item.title</h3>
+                                <label>@item.makerspace.name</label>
+                                <p class="eventdate">start: @item.start</p>
+                                <p class="eventdate">slut: @item.end</p>
+                            </div>
+                        </div>
+                    </a>
+                }
+            </div>
+        </div>
+        <div class="otherevents">
+            <h1>Andre events</h1>
+                <div class="events-content">
+                    @foreach (var item in Model)
+                     {
+                        <a class="card shadow-3" href="@Url.Action("Index", "Event", new {id = item.id})">
+                            <div class="event-header">
+                                <img src="~/css/img/badges/020-badge.png" />
+                                <div class="event-header-text">
+                                    <h3> @item.title</h3>
+                                    <label>@item.makerspace.name</label>
+                                    <p class="eventdate">start: @item.start</p>
+                                    <p class="eventdate">slut: @item.end</p>
+                                </div>
+                            </div>
+                        </a>
+                     }
+                </div>
+            </div>
+    </div>
+    <div class="calendar">
+        <iframe src="https://calendar.google.com/calendar/embed?height=500&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FCopenhagen&amp;showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showTz=0&amp;showCalendars=1&amp;showNav=1&amp;showDate=1" style="border:solid 1px #777" width="700" height="500" frameborder="0" scrolling="no"></iframe>
+    </div>
+
+</div>

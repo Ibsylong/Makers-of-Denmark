@@ -1,0 +1,82 @@
+﻿@model Makers_of_Denmark.Models.User
+@{
+    ViewData["Title"] = "Profile";
+}
+
+<partial name="~/Views/Shared/_TopNavBar.cshtml" />
+<div class="profile">
+    <div class="profile-container">
+        <div class="info container shadow-4">
+            <div class="avatar">
+                <img src="~/css/img/avatar.png" />
+            </div>
+            <form class="info-form" action="/profile" method="post">
+                <div>
+                    <label asp-for="name">Navn</label>
+                    <input asp-for="name" />
+                </div>
+                <div>
+                    <label asp-for="username">Brugernavn</label>
+                    <input asp-for="username" />
+                </div>
+                <div>
+                    <label asp-for="email">Email</label>
+                    <input asp-for="email" />
+                </div>
+                <div>
+                    <label asp-for="schoolName">Skole/Uddannelse</label>
+                    <input asp-for="schoolName" />
+                </div>
+                <div>
+                    <label asp-for="phone">Telefon</label>
+                    <input asp-for="phone" />
+                </div>
+                <div>
+                    <label asp-for="birthday">Fødselsdag</label>
+                    <input asp-for="birthday" />
+                </div>
+                <input asp-for="id" type="hidden" />
+                <div>
+                    <label asp-for="gender">Køn</label>
+                    @Html.DropDownListFor(model => model.gender, new List<SelectListItem>
+                           {
+                               new SelectListItem{Text="Kvinde", Value="kvinde"},
+                               new SelectListItem{Text="Mand", Value="mand"},
+                               new SelectListItem{Text="Andet", Value="andet"}
+                           })
+                </div>
+                <button type="submit">Gem</button>
+            </form>
+        </div>
+        <div class="container shadow-4">
+            <div class="badges">
+                <h2>Mine badges</h2>
+                <div class="badge-list">
+                    @foreach (Badge badge in Model.badges)
+                    {
+                        <div>
+                            <img src="@("/css/img/badges/" + badge.icon + ".png")" />
+                            <p>@badge.name</p>
+                        </div>
+                    }
+                </div>
+                <a class="see-more underline">se mere</a>
+            </div>
+            <div class="makerspaces">
+                <h2>Mine Makerspaces</h2>
+                <div class="makerspace-list">
+                    @foreach (Makerspace makerspace in Model.makerspaces)
+                    {
+                        <div>
+                            <a asp-controller="Makerspace" asp-route-id="@makerspace.id">
+                                <img src="@("/css/img/badges/" + makerspace.logoUrl + ".png")" />
+                                <h3>@makerspace.name</h3>
+                            </a>
+                        </div>
+                    }
+                </div>
+                <a class="see-more underline">se mere</a>
+            </div>
+        </div>
+    </div>
+</div>

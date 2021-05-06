@@ -1,0 +1,137 @@
+﻿@import "../variables.scss";
+
+.profile {
+    background-color: $color-background;
+
+    .profile-container {
+        width: 55%;
+        padding: 2rem 0;
+        margin: auto;
+
+        .container {
+            background: white;
+            padding: 3rem;
+            border-radius: $border-radius-md;
+        }
+
+        .info {
+            display: grid;
+            grid-template-columns: repeat(2,auto);
+            grid-row-gap: 3rem;
+            margin-bottom: 3rem;
+
+            h2 {
+                text-align: center;
+            }
+
+            button {
+                grid-column: 2;
+                margin-left: auto;
+            }
+
+            .avatar {
+                img {
+                    height: 15rem;
+                }
+            }
+
+            .info-form {
+                display: grid;
+                grid-row-gap: 1rem;
+                grid-column-gap: 3rem;
+                grid-template-columns: repeat(2,auto);
+            }
+        }
+
+        .badges {
+            position: relative;
+            padding-bottom: 2rem;
+
+            h2 {
+                margin-bottom: 1rem
+            }
+
+            .badge-list {
+                display: grid;
+                grid-template-rows: 100%;
+                grid-template-columns: repeat(12,1fr);
+                gap: 1rem;
+                font-size: 0.75rem;
+                text-align: center;
+                font-weight: 500;
+
+                p {
+                    margin-top: 0.25rem;
+                }
+
+                & > * {
+                    transition: 100ms all ease-in-out;
+                    cursor: pointer;
+                    position: relative;
+                    z-index: 1;
+
+                    &:before {
+                        content: "";
+                        width: 100%;
+                        height: 61%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        border-radius: 100%;
+                        z-index: -1;
+                        transition: 100ms all ease-in-out;
+                        box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+                    }
+
+                    &:hover {
+                        transform: scale(1.2);
+
+                        &:before {
+                            box-shadow: 0px 2px 50px -10px rgba(0,0,0,0.4);
+                        }
+                    }
+                }
+            }
+        }
+
+        .see-more {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            cursor: pointer;
+        }
+
+        .makerspaces {
+            margin-top: 4rem;
+            position: relative;
+            padding-bottom: 2rem;
+
+            h2 {
+                margin-bottom: 1rem
+            }
+
+            .makerspace-list {
+                display: grid;
+                grid-template-rows: 100%;
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 1rem;
+                text-align: center;
+
+                & > div {
+                    padding: 1rem;
+                    border-radius: $border-radius-md;
+                    border: 4px solid rgba(0,0,0,0);
+                    cursor: pointer;
+
+                    &:hover {
+                        border: 4px solid $color-faded;
+                    }
+
+                    img {
+                        padding: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}

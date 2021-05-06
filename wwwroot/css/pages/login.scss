@@ -1,0 +1,119 @@
+﻿@import "../variables.scss";
+
+.login {
+
+    @media screen and (max-width: 624px) {
+        .login-illustration, .logo-text {
+            display: none !important;
+        }
+    }
+
+    display: flex;
+    min-height: 100vh;
+    // så man kan bruge min-height: 100vh
+    margin-top: -24px;
+    padding-top: 24px;
+    /////////////////////////////////
+
+    button, .btn{
+        width: 100%
+    }
+    .logo-text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 1vw 2vw;
+        color: $color-text-2;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        font-size: 1.5rem;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 3rem;
+        margin-top: 2rem;
+    }
+
+    .login-illustration {
+        display: flex;
+        /*background-image: url("img/workshop.jpg");*/
+        background: linear-gradient(0deg, rgba(76, 81, 237, 0.1), rgba(76, 81, 237, 0.1)), url("img/workshop.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 80vw;
+        width: 100%;
+
+        img {
+            width: 100%;
+            align-self: center;
+
+            &:after {
+                content: "";
+                width: 100px;
+                height: 100px;
+            }
+        }
+    }
+
+    .login-form {
+        width: 800px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .login-container {
+        margin: auto;
+        width: 70%;
+    }
+
+    .alternative-login {
+
+        div:nth-child(1) {
+            margin-top: 4rem;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            align-items: center;
+            justify-items: center;
+            color: $color-text-2;
+            margin-bottom: 1rem;
+            white-space: nowrap;
+            gap: 0.7rem;
+
+            p {
+                width: 100%;
+                height: 2px;
+                background-color: $color-faded;
+            }
+        }
+
+        div:nth-child(2) {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+
+            img {
+                background: $color-faded;
+                width: 60px;
+                border-radius: 6px;
+                cursor: pointer;
+
+                &:hover {
+                    background: $color-primary;
+                }
+            }
+        }
+    }
+
+    .register-makerspace {
+        text-align: center;
+        margin-bottom: 4rem;
+        margin-top: 3rem;
+
+        p + p {
+            color: $color-primary;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+}

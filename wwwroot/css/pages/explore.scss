@@ -1,0 +1,101 @@
+﻿@import "../variables.scss";
+
+// GLOBAL
+
+#map {
+    height: 500px;
+}
+
+.explore {
+    background-color: $color-background;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+}
+
+.explore-wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+//Intro sektion
+.intro-section {
+    display: flex;
+    grid-template-columns: repeat(2,auto);
+}
+
+.box1 {
+    width: 45vw;
+    padding-right: 5rem;
+}
+
+.box2 {
+    width: 55vw;
+}
+
+.title {
+    padding-bottom: $padding-md;
+}
+
+.paragraph {
+    margin-top: $padding-md;
+    padding-bottom: $padding-lg;
+}
+
+.title-button {
+    width: 10rem;
+}
+
+
+
+
+//Grid sektion
+.flex {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 5vh 0 1rem 0
+}
+
+.link-text {
+    margin-top: 1rem;
+}
+
+
+.scrolling-wrapper-flexbox {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  
+  .card {
+    flex: 0 0 auto;
+  }
+}
+
+.card {
+    display: inline-block;
+  //border-radius: 15px;
+  width: 15rem;
+  height: 22rem;
+  margin: 0 6rem 2rem 0;
+  background: white;
+}
+
+.card-img {
+    height: 60%;
+    margin: 1rem auto;
+}
+
+.event-img {
+    height: 50%;
+    margin: 1rem auto;
+}
+
+.card-title {
+    margin: 1rem 0 0 0;
+    text-align: center;
+}
+
+.card-info {
+    margin: 2px 0 0 0;
+    text-align: center;
+}

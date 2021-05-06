@@ -1,0 +1,192 @@
+﻿@model Makers_of_Denmark.Models.FeedData
+@{
+    ViewData["Title"] = "Hjem";
+}
+<partial name="~/Views/Shared/_TopNavBar.cshtml" />
+<div class="feed-wrapper">
+    <div class="feed">
+        <div>
+            <div class="eventsnearby">
+                <label>Events i nærheden</label>
+                <div class="eventsnearby-list">
+                    @foreach (var item in Model.events)
+                    {
+                    <div>
+                        @*<img src="@Url.Content(item.logoUrl)" alt="" />*@
+                        <h3>@Html.DisplayFor(modelItem => item.title)</h3>
+                        <button class="btn-cta tilmeld-knap" onclick="location.href='@Url.Action("Index", "Event", new {id = item.id})'">Tilmeld</button>
+                    </div>
+                    }
+                </div>
+            </div>
+            <div class="yourevents">
+                <label>Dine events</label>
+            </div>
+        </div>
+        <div class="feed-content">
+            <label>Seneste opslag</label>
+            <div class="feed-field">
+                <div class="card shadow-3">
+                    <div class="feedpost-header">
+                        <img src="~/css/img/badges/020-badge.png" />
+                        <div class="feedpost-header-text">
+                            <h3> Makerspace 1</h3>
+                            <label>Makerspace</label>
+                            <p class="feedpost-time">1h</p>
+                        </div>
+                    </div>
+                    <p>Feedpost text 1</p>
+                </div>
+                <div class="card shadow-3">
+                    <div class="feedpost-header">
+                        <img src="~/css/img/badges/020-badge.png" />
+                        <div class="feedpost-header-text">
+                            <h3> Makerspace 2</h3>
+                            <label>Makerspace</label>
+                            <p class="feedpost-time">1h</p>
+                        </div>
+                    </div>
+                    <p>Feedpost text 2</p>
+                </div>
+                <div class="card shadow-3">
+                    <div class="feedpost-header">
+                        <img src="~/css/img/badges/020-badge.png" />
+                        <div class="feedpost-header-text">
+                            <h3> Makerspace 3</h3>
+                            <label>Makerspace</label>
+                            <p class="feedpost-time">1h</p>
+                        </div>
+                    </div>
+                    <p>Feedpost text 3</p>
+                </div>
+                <div class="card shadow-3">
+                    <div class="feedpost-header">
+                        <img src="~/css/img/badges/020-badge.png" />
+                        <div class="feedpost-header-text">
+                            <h3> Makerspace 4</h3>
+                            <label>Makerspace</label>
+                            <p class="feedpost-time">1h</p>
+                        </div>
+                    </div>
+                    <p>Feedpost text 4</p>
+                </div>
+                <div class="card shadow-3">
+                    <div class="feedpost-header">
+                        <img src="~/css/img/badges/020-badge.png" />
+                        <div class="feedpost-header-text">
+                            <h3> Makerspace 5</h3>
+                            <label>Makerspace</label>
+                            <p class="feedpost-time">1h</p>
+                        </div>
+                    </div>
+                    <p>Feedpost text 5</p>
+                </div>
+                <div class="card shadow-3">
+                    <div class="feedpost-header">
+                        <img src="~/css/img/badges/020-badge.png" />
+                        <div class="feedpost-header-text">
+                            <h3> Makerspace 6</h3>
+                            <label>Makerspace</label>
+                            <p class="feedpost-time">1h</p>
+                        </div>
+                    </div>
+                    <p>Feedpost text 6</p>
+                </div>
+                <div class="card shadow-3">
+                    <div class="feedpost-header">
+                        <img src="~/css/img/badges/020-badge.png" />
+                        <div class="feedpost-header-text">
+                            <h3> Makerspace 7</h3>
+                            <label>Makerspace</label>
+                            <p class="feedpost-time">1h</p>
+                        </div>
+                    </div>
+                    <p>Feedpost text 7</p>
+                </div>
+                <div class="card shadow-3">
+                    <div class="feedpost-header">
+                        <img src="~/css/img/badges/020-badge.png" />
+                        <div class="feedpost-header-text">
+                            <h3> Makerspace 8</h3>
+                            <label>Makerspace</label>
+                            <p class="feedpost-time">1h</p>
+                        </div>
+                    </div>
+                    <p>Feedpost text 8</p>
+                </div>
+                <div class="card shadow-3">
+                    <div class="feedpost-header">
+                        <img src="~/css/img/badges/020-badge.png" />
+                        <div class="feedpost-header-text">
+                            <h3> Makerspace 9</h3>
+                            <label>Makerspace</label>
+                            <p class="feedpost-time">1h</p>
+                        </div>
+                    </div>
+                    <p>Feedpost text 9</p>
+                </div>
+                <div class="card shadow-3">
+                    <div class="feedpost-header">
+                        <img src="~/css/img/badges/020-badge.png" />
+                        <div class="feedpost-header-text">
+                            <h3> Makerspace 10</h3>
+                            <label>Makerspace</label>
+                            <p class="feedpost-time">1h</p>
+                        </div>
+                    </div>
+                    <p>Feedpost text 10</p>
+                </div>
+                <div class="card shadow-3">
+                    <div class="feedpost-header">
+                        <img src="~/css/img/badges/020-badge.png" />
+                        <div class="feedpost-header-text">
+                            <h3> Makerspace 11</h3>
+                            <label>Makerspace</label>
+                            <p class="feedpost-time">1h</p>
+                        </div>
+                    </div>
+                    <p>Feedpost text 11</p>
+                </div>
+                <div class="card shadow-3">
+                    <div class="feedpost-header">
+                        <img src="~/css/img/badges/020-badge.png" />
+                        <div class="feedpost-header-text">
+                            <h3> Makerspace 12</h3>
+                            <label>Makerspace</label>
+                            <p class="feedpost-time">1h</p>
+                        </div>
+                    </div>
+                    <p>Feedpost text 12</p>
+                </div>
+                <div class="card shadow-3">
+                    <div class="feedpost-header">
+                        <img src="~/css/img/badges/020-badge.png" />
+                        <div class="feedpost-header-text">
+                            <h3> Makerspace 13</h3>
+                            <label>Makerspace</label>
+                            <p class="feedpost-time">1h</p>
+                        </div>
+                    </div>
+                    <p>Feedpost text 13</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h1>Velkommen</h1><br />
+            <div class="makerspaces">
+                <h2 class="makerspacelabel">Makerspaces</h2>
+                <div class="makerspace-list">
+                    @foreach (var item in Model.makerSpaces)
+                    {
+                    <div>
+                        @*<img src="@Url.Content(item.logoUrl)" alt="" />*@
+                        <img src="~/css/img/badges/020-badge.png" />
+                        <h3>@Html.DisplayFor(modelItem => item.name)</h3>
+                    </div>
+                    }
+                </div>
+                <a class="underline" asp-area="" asp-controller="Profile">+ Se mere</a>
+            </div>
+        </div>
+    </div>
+</div>

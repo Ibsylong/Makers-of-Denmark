@@ -1,0 +1,68 @@
+﻿@import "../variables.scss";
+
+#home {
+    background-color: $color-background;
+
+
+    .grid-content {
+        margin: 0 auto;
+        width: 80%;
+        padding: 2rem;
+
+
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 2fr);
+            grid-gap: 3rem;
+            margin-bottom: 3rem;
+            align-items: center;
+        }
+
+        .btn-cta {
+            margin-top: 1rem;
+            width: 10rem;
+        }
+
+        .grid-container-2 {
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-gap: 1rem;
+            padding: 2rem 0;
+            align-items: center;
+            margin: 0 auto;
+            width: 100%;
+
+            .filter-function {
+                width: 50%;
+            }
+
+            #map {
+                height: 800px;
+            }
+        }
+
+        .grid-container-3 {
+            display: grid;
+            grid-template-columns: repeat(2, 50%);
+            margin-top: 5rem;
+            align-items: center;
+            background-color: white;
+            border-radius: $border-radius-md;
+            overflow: hidden;
+
+            .box{
+                padding: 5rem;
+            }
+
+            img {
+                width: 100%
+            }
+        }
+
+    }
+}
+
+
+
+
